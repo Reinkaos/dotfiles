@@ -75,6 +75,7 @@ Plugin 'nanotech/jellybeans.vim'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'chriskempson/base16-vim'
 Plugin 'elixir-lang/vim-elixir'
+Plugin 'dracula/vim'
 
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -96,6 +97,6 @@ let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme jellybeans
+colorscheme dracula
 
 let g:rspec_runner = "os_x_iterm2"
