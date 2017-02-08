@@ -9,7 +9,6 @@ set history=1000                " Remember last 1000 commands
 set scrolloff=4                 " Keep at least 4 lines below cursor
 set ruler
 set showcmd
-set nowrap
 set smarttab
 set autoindent
 set expandtab
@@ -97,6 +96,6 @@ let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
 let g:ctrlp_use_caching = 0
 
 let base16colorspace=256  " Access colors present in 256 colorspace
-colorscheme base16-default-dark
+colorscheme jellybeans
 
 let g:rspec_runner = "os_x_iterm2"
