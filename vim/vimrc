@@ -14,6 +14,10 @@ set autoindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set noswapfile
+set nobackup
+set nowritebackup
+set laststatus=2
 
 " Use the space key as our leader. Put this near the top of your vimrc
 let mapleader = "\<Space>"
