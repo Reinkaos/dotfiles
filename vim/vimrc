@@ -109,6 +109,6 @@ let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme base16-default-dark
 
 let g:rspec_runner = "os_x_iterm2"
-
+autocmd BufWritePre * %s/\s\+$//e
 
 syntax on                 " Enable syntax highlighting
