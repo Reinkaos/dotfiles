@@ -1,5 +1,8 @@
 " @Reinkaos Dotfiles
-
+" brew install the_silver_searcher
+" brew install fzf
+" You will need Vundle too :)
+"
 set number                      " Display line numbers beside buffer
 set nocompatible                " Don't maintain compatibilty with Vi.
 set hidden                      " Allow buffer change w/o saving
