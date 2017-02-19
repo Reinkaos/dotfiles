@@ -85,6 +85,7 @@ Plugin 'wavded/vim-stylus'
 Plugin 'junegunn/fzf'
 Plugin 'junegunn/fzf.vim'
 Plugin 'ngmy/vim-rubocop'
+Plugin 'gregsexton/MatchTag'
 
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
