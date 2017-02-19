@@ -1,5 +1,8 @@
 " @Reinkaos Dotfiles
-
+" brew install the_silver_searcher
+" brew install fzf
+" You will need Vundle too :)
+"
 set number                      " Display line numbers beside buffer
 set nocompatible                " Don't maintain compatibilty with Vi.
 set hidden                      " Allow buffer change w/o saving
@@ -18,6 +21,8 @@ set noswapfile
 set nobackup
 set nowritebackup
 set laststatus=2
+set splitbelow
+set splitright
 
 " Use the space key as our leader. Put this near the top of your vimrc
 let mapleader = "\<Space>"
