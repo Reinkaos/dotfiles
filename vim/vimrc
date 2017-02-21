@@ -93,6 +93,7 @@ Plugin 'ngmy/vim-rubocop'
 Plugin 'arcticicestudio/nord-vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'gregsexton/MatchTag'
 
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
