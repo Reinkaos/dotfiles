@@ -1,0 +1,123 @@
+" @Reinkaos Dotfiles
+" brew install the_silver_searcher
+" brew install fzf
+" You will need Vundle too :)
+"
+set number                      " Display line numbers beside buffer
+set nocompatible                " Don't maintain compatibilty with Vi.
+set hidden                      " Allow buffer change w/o saving
+set lazyredraw                  " Don't update while executing macros
+set backspace=indent,eol,start  " Sane backspace behavior
+set history=1000                " Remember last 1000 commands
+set scrolloff=4                 " Keep at least 4 lines below cursor
+set ruler
+set showcmd
+set smarttab
+set autoindent
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set noswapfile
+set nobackup
+set nowritebackup
+set laststatus=2
+set splitbelow
+set splitright
+
+" Use the space key as our leader. Put this near the top of your vimrc
+let mapleader = "\<Space>"
+
+" Split edit your vimrc. Type space, v, r in sequence to trigger
+nmap <leader>vr :sp $MYVIMRC<cr>
+
+" Source (reload) your vimrc. Type space, s, o in sequence to trigger
+nmap <leader>so :source $MYVIMRC<cr>
+
+" exits insert mode and saves the buffer
+imap <C-s> <esc>:w<cr>
+
+" Pre-populate a split command with the current directory
+nmap <leader>v :vnew <C-r>=escape(expand("%:p:h"), ' ') . '/'<cr>
+
+" Edit your vimrc in a new tab
+nmap <leader>vi :tabedit ~/.vimrc<cr>
+
+" Copy the entire buffer into the system register
+nmap <leader>co ggVG*y
+
+" Edit the db/schema.rb Rails file in a split
+nmap <leader>sc :split db/schema.rb<cr>
+
+" Move up and down by visible lines if current line is wrapped
+nmap j gj
+nmap k gk
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" Plugins
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" My Plugins
+
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-dispatch'
+Plugin 'ervandew/supertab'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'skwp/greplace.vim'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'chriskempson/base16-vim'
+Plugin 'elixir-lang/vim-elixir'
+Plugin 'dracula/vim'
+Plugin 'digitaltoad/vim-pug'
+Plugin 'statianzo/vim-jade'
+Plugin 'wavded/vim-stylus'
+Plugin 'junegunn/fzf'
+Plugin 'junegunn/fzf.vim'
+Plugin 'ngmy/vim-rubocop'
+Plugin 'arcticicestudio/nord-vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'gregsexton/MatchTag'
+
+" all of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+"
+" Make CtrlP use ag for listing the files. Way faster and no useless files.
+let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
+let g:ctrlp_use_caching = 0
+
+let base16colorspace=256  " Access colors present in 256 colorspace
+colorscheme nord
+
+let g:rspec_runner = "os_x_iterm2"
+autocmd BufWritePre * %s/\s\+$//e
+
+syntax on                 " Enable syntax highlighting
