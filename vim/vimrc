@@ -129,7 +129,14 @@ let g:ctrlp_use_caching = 0
 let base16colorspace=256  " Access colors present in 256 colorspace
 colorscheme nord
 
-let g:rspec_runner = "os_x_iterm2"
 autocmd BufWritePre * %s/\s\+$//e
+
+let g:rspec_command = "Dispatch bundle exec rspec {spec}"
+let g:rspec_runner = "os_x_iterm"
+
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 syntax on                 " Enable syntax highlighting
