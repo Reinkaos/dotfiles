@@ -1,0 +1,67 @@
+:insert
+:q quit
+: h, j, k, l right down up left
+: w move forward one word
+: b move backward one word
+: e move forward to the of be word
+: f [char] go to that character
+: t [char] go up until that char
+: F [char[ go back to that character
+: F [char] go back until that character
+: , ; repeat previous action
+: /search search n next N previous
+: ctrl d go down
+: ctrl u go up
+: line-number G go to that line
+: H M L move High Middle Low within the Viewport
+: d delete
+: c change
+: y yank (copy)
+: v visually select
+: >, < indent dedent
+: = reformat
+: de delete to the end of the current word
+: d2e delete to the end of the next word
+: dj delete down a line
+: dt) delete up until next closing parans
+: d/world dlete up until the first search match for 'world'
+:iw, aw 'inner word', 'a word' ( a word includes the space)
+:ip, ap, inner paragraph, a paragraph
+:i) a) inner paren, a paren
+:i', a' inner single quote, a single quote
+:i", a" inner double quote, a double quote
+:it , at inner tag, a tag
+:. repeats the last change
+:new will create a new horizontal spli
+:vnew will create a new veritcal splt
+:split filename will split open and show you the file
+:vsplit filename will split open and show you the file
+:ctrl w + h j k l to change windowo
+:ctrl w + H J K L to re order the windows
+:ctrl w + - or + will increase or decrease the height, 12ctrlw - will decrease by 12
+:ctrl w > < will increase or decrease the height
+:ctrl w = will rebalance the windows
+:zz will center the window pane on the active line
+:zt will move the line to the top of the window
+:zb will move the line to the bottom of the window
+:tabnew creates a new tab
+: tabedit will open file in new tab
+: gt to move between tabs
+: gT to go backwords between tabs
+: you can type ctrl w then T to break the current split into it's own tab
+
+Searching and Replace
+
+on the current line
+
+:s/world/pineapple replace world with pineapple
+
+:%s/world/pineapple/gci replace world with pineapple on the whole file, gci means irrespective of case and ask for confirmation
+
+:Gsearch term location
+
+modify search and replace
+
+:%s/\zslocation_\zegeocoding_service//gc
+
+:Greplace to confirm
