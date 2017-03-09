@@ -30,6 +30,7 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+set autoread
 
 " Use the space key as our leader. Put this near the top of your vimrc
 let mapleader = "\<Space>"
