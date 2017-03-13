@@ -30,6 +30,8 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+set autoread
+set relativenumber
 
 " Use the space key as our leader. Put this near the top of your vimrc
 let mapleader = "\<Space>"
@@ -57,6 +59,8 @@ nmap <leader>sc :split db/schema.rb<cr>
 
 " Clear search
 nmap <leader>h :nohlsearch<cr>
+
+inoremap jj <Esc>
 
 " Move up and down by visible lines if current line is wrapped
 nmap j gj
