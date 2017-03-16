@@ -119,6 +119,7 @@ Plugin 'nelstrom/vim-textobj-rubyblock'
 Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rake'
 Plugin 'morhetz/gruvbox'
+Plugin 'slashmili/alchemist.vim'
 
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -136,13 +137,21 @@ filetype plugin indent on    " required
 " Put your non-Plugin stuff after this line
 "
 " Make CtrlP use ag for listing the files. Way faster and no useless files.
-let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
-let g:ctrlp_use_caching = 0
-" Ignore some folders and files for CtrlP indexing
-let g:ctrlp_custom_ignore = {
-  \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
-  \ 'file': '\.so$\|\.dat$|\.DS_Store$'
-  \ }
+" let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor --nogroup ""'
+" let g:ctrlp_use_caching = 0
+" " Ignore some folders and files for CtrlP indexing
+" let g:ctrlp_custom_ignore = {
+"   \ 'dir':  '\.git$\|\.yardoc\|public$|log\|tmp$',
+"   \ 'file': '\.so$\|\.dat$|\.DS_Store$'
+"   \ }
+
+let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
+      \ --ignore .git
+      \ --ignore .svn
+      \ --ignore .hg
+      \ --ignore .DS_Store
+      \ --ignore "**/*.pyc"
+      \ -g ""'
 
 colorscheme gruvbox
 runtime macros/matchit.vim
