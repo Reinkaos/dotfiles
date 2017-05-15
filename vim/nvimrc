@@ -120,8 +120,9 @@ Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rake'
 Plugin 'morhetz/gruvbox'
 Plugin 'slashmili/alchemist.vim'
-Plugin 'rakr/vim-two-firewatch'
-Plugin 'chriskempson/base16-vim'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'scrooloose/nerdtree'
+Plugin 'raphamorim/lucario'
 
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -156,7 +157,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ -g ""'
 let g:ctrlp_use_caching = 0
 
-colorscheme base16-default-dark
+colorscheme lucario
 runtime macros/matchit.vim
 autocmd BufWritePre * %s/\s\+$//e
 set background=dark
@@ -167,5 +168,6 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 syntax on                 " Enable syntax highlighting
