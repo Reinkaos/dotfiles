@@ -120,11 +120,10 @@ Plugin 'tpope/vim-rake'
 Plugin 'morhetz/gruvbox'
 Plugin 'slashmili/alchemist.vim'
 Plugin 'chriskempson/base16-vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 't1mxg0d/vim-lucario'
 Plugin 'itchyny/lightline.vim'
-
+Plugin 'scrooloose/nerdtree'
 
 " all of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -157,6 +156,7 @@ let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup --hidden
       \ --ignore .DS_Store
       \ --ignore "**/*.pyc"
       \ -g ""'
+let g:ctrlp_use_caching = 0
 
 colorscheme base16-default-light
 runtime macros/matchit.vim
@@ -171,6 +171,7 @@ map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
+map <C-n> :NERDTreeToggle<CR>
 
 " Syntastic
 let g:syntastic_enable_signs         = 1
